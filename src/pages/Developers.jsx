@@ -47,7 +47,7 @@ const Developers = ({ exchangeRate, currency_name}) => {
           <p>
             <span>Hire: </span>
             {currency_name}{' '}
-            {(dev?._source.starting_from / exchangeRate).toFixed(0)}
+            {(dev?._source.starting_from / exchangeRate).toFixed(2)}
           </p>
           <p><span>Notice Period: </span>
             {dev?._source.notice_period_in_hours}hrs

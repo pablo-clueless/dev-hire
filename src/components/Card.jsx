@@ -34,7 +34,7 @@ const Card = ({ dev, exchangeRate, currency_logo }) => {
         <div className='card__content'>
           <h4 className='card__name'>{dev._source.display_name}</h4>
           <p className='card__amount'>
-            {currency_logo} {(dev._source.starting_from / exchangeRate).toFixed(0)}
+            {currency_logo} {(dev._source.starting_from / exchangeRate).toFixed(2)}
           </p>
         </div>
         <Link to={`/developers/${dev._id}`}>

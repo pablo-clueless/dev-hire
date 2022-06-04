@@ -1,0 +1,145 @@
+.menu__button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.menu__button .button__line {
+  width: 80%;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0.25rem 0;
+  transition: var(--transition-time);
+}
+
+.menu__button.open .button__line {
+  transition: var(--transition-time);
+}
+
+.menu__button.open .button__line:nth-child(1) {
+  width: 80%;
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu__button.open .button__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu__button.open .button__line:nth-child(3) {
+  width: 80%;
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+.menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  /* backdrop-filter: blur(3px); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transform: translate3d(-100%, 0, 0);
+  transition: var(--transition-time);
+}
+
+.menu.open {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu__nav {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-white);
+  padding: 2rem 0;
+  border-right: 1px solid var(--color-secondary);
+}
+
+.menu__nav a {
+  color: var(--color-primary);
+}
+
+.menu__nav a span {
+  color: var(--color-dark);
+}
+
+.nav__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.nav__list li {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+}
+
+.nav__list .nav__link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-secondary);
+  position: relative;
+}
+
+.nav__list .nav__link.active {
+  color: var(--color-primary);
+  border-left: 5px solid var(--color-primary);
+}
+
+.nav__list .nav__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  color: var(--color-secondary);
+  border-radius: 3px;
+  padding: 0.25rem;
+  margin: 0 0.5rem;
+}
+
+.nav__list .nav__link.active .nav__icon {
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
+@media screen and (min-width: 900px) {
+  .menu__button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu__button {
+    display: block;
+  }
+
+  .menu {
+    display: block;
+  }
+  
+  .menu__nav {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu__nav {
+    width: 50%;
+  }
+}

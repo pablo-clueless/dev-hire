@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Home, Favorites, Developers } from './pages'
-import { Error, Footer, Loading, Sidebar } from './components'
+import { Error, Footer, Menu, Loading, Sidebar } from './components'
 import { fetchDevs } from './redux/features/devSlice'
 import { fetchExchange } from './redux/features/currencySlice'
 import './App.css'
@@ -26,6 +26,7 @@ const App = () => {
   return (
     <div className='App'>
       <Sidebar />
+      <Menu />
       <main className='container'>
         <div>
           <Routes>
