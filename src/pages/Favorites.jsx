@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { Layout } from '../components'
 
-const Favorites = () => {
+const Favorites = ({ exchangeRate, currency_name }) => {
   const { favorite } = useSelector(state => state.devs)
 
   return (
@@ -17,7 +17,7 @@ const Favorites = () => {
           </div>
         </section>
       </div> :
-      <Layout heading='Favorites' data={favorite} />}
+      <Layout heading='Favorites' data={favorite} exchangeRate={exchangeRate} currency_name={currency_name} />}
     </div>
   )
 }

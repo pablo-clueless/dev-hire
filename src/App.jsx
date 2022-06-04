@@ -30,8 +30,8 @@ const App = () => {
         <div>
           <Routes>
             <Route path='/' element={<Home exchangeRate={exchangeRate} currency_name={currencyName} />} />
-            <Route path='/favorites' element={<Favorites />} />
-            <Route path='/developers/:id' element={<Developers />} />
+            <Route path='/favorites' element={<Favorites exchangeRate={exchangeRate} currency_name={currencyName} />} />
+            <Route path='/developers/:id' element={<Developers exchangeRate={exchangeRate} currency_name={currencyName} />} />
           </Routes>
         </div>
         <Footer setExchangeRate={setExchangeRate} setCurrencyName={setCurrencyName} />

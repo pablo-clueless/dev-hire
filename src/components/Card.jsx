@@ -7,18 +7,17 @@ import '../styles/card.css'
 import { addToFavorite, removeFromFavorite } from '../redux/features/devSlice'
 
 const Card = ({ dev, exchangeRate, currency_logo }) => {
-  const [isFavorite, setisFavorite] = useState(false)
   const dispatch = useDispatch()
   const { favorite } = useSelector(state => state.devs)
+
+  let isFavorite = favorite.find(item => item._id === dev._id)
 
   const handleFavorite = () => {
     let selectedDev = favorite.find(item => item._id === dev._id)
     if(selectedDev) {
       dispatch(removeFromFavorite(dev))
-      setisFavorite(false)
     } else {
       dispatch(addToFavorite(dev))
-      setisFavorite(true)
     }
   }
 

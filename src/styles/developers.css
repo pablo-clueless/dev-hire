@@ -1,5 +1,5 @@
 .dev__page {
-  width: 100%;
+  width: 80vw;
   height: 90vh;
   padding: 2rem 1rem;
   overflow-y: scroll;
@@ -7,6 +7,9 @@
 
 .header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
 }
 
 .header .header__image {
@@ -42,12 +45,6 @@
   margin-bottom: 0.5rem;
 }
 
-.header .header__details h2 span {
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: var(--color-secondary);
-}
-
 .header .header__details h4 {
   margin-bottom: 0.5rem;
 }
@@ -75,6 +72,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .dev__page {
+    width: 100vw;
+  }
+
   .header .header__image {
     height: 30vh;
   }
