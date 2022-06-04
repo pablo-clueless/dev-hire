@@ -1,0 +1,95 @@
+.card {
+  width: 238px;
+  height: 224px;
+  background: var(--color-white);
+  border-radius: 10px;
+}
+
+.card__header {
+  width: 100%;
+  height: 139px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card__header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__header button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+  transition: var(--transition-time);
+}
+
+.card__header button.selected {
+  background: var(--color-white);
+}
+
+.card__header button .icon {
+  color: var(--color-white);
+}
+
+.card__header button .icon.selected {
+  color: var(--color-error);
+}
+
+.card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  margin: 0 0.5rem;
+  object-fit: cover;
+  position: relative;
+  top: -10%;
+}
+
+.card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-top: -1.5rem;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__content .card__name {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin: 0.25rem 0;
+}
+
+.card__content .card__amount {
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+}
+
+.card__body a {
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+  outline: none;
+  padding: 0 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+

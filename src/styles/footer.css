@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.footer p {
+  color: var(--color-secondary);
+  font-size: 0.75rem;
+}
+
+.footer .select {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 5px;
+  outline: none;
+  padding: 0 0.5rem;
+}
+
+.footer .select img {
+  width: 1rem;
+}
+
+.footer .select select {
+  width: 80%;
+  background: transparent;
+  border: none;
+  outline: none;
+}

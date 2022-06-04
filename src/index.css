@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Ubuntu:wght@500&display=swap');
+
+:root {
+  --color-primary: #1D9BF0;
+  --color-secondary: #BBBBBB;
+  --color-light: #E5E5E5;
+  --color-dark: #14142B;
+  --color-white: #FFFFFF;
+  --color-error: #FF4135;
+  --font-ubuntu: 'Ubuntu', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --transition-time: 0.5s all ease;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-light);
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: var(--font-ubuntu);
+}
+
+a {
+  text-decoration: none;
+}
