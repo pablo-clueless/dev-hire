@@ -13,7 +13,7 @@ const Favorites = ({ exchangeRate, currency_name }) => {
         <h1>Favorites</h1>
         <section className='layout__content'>
           <div className='error'>
-            <p>No Favorites</p>
+            <p>No Favorites yet</p>
           </div>
         </section>
       </div> :

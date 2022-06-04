@@ -39,7 +39,7 @@
   display: none;
   width: 100vw;
   height: 100vh;
-  /* backdrop-filter: blur(3px); */
+  /* backdrop-filter: blur(1px); */
   position: absolute;
   top: 0;
   left: 0;
@@ -90,10 +90,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   color: var(--color-secondary);
-  position: relative;
+  padding: 0 2rem;
 }
 
 .nav__list .nav__link.active {
