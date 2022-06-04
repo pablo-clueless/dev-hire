@@ -25,11 +25,11 @@ const Footer = ({ setExchangeRate, setCurrencyName }) => {
       </p>
 
       <div className="select">
-        <img src={currency.flag_url} alt={currency.name} />
+        <img src={currency?.flag_url} alt={currency?.name} />
         <select value={value} onChange={(e) => setValue(e.target.value)}>
           {currencies.currencies?.map(currency => (
-            <option key={currency.id}>
-              {currency.name}
+            <option key={currency?.id}>
+              {currency?.name}
             </option>
           ))}
         </select>

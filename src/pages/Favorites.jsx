@@ -8,7 +8,16 @@ const Favorites = () => {
 
   return (
     <div>
-      <Layout heading='Favorites' data={favorite} />
+      {favorite?.length === 0 ? 
+      <div className='layout'>
+        <h1>Favorites</h1>
+        <section className='layout__content'>
+          <div className='error'>
+            <p>No Favorites</p>
+          </div>
+        </section>
+      </div> :
+      <Layout heading='Favorites' data={favorite} />}
     </div>
   )
 }

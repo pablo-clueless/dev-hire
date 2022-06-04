@@ -7,6 +7,7 @@ const initialState = {
   favorite: [],
   isFavorite: false,
   isLoading: false,
+  isError: null
 }
 
 export const fetchDevs = createAsyncThunk(
@@ -46,8 +47,9 @@ const devSlice = createSlice({
       state.devs = action.payload
       state.isLoading = false
     },
-    [fetchDevs.rejected]: (state) => {
+    [fetchDevs.rejected]: (state, action) => {
       state.isLoading = false
+      state.isError = action.payload
     }
   },
 })

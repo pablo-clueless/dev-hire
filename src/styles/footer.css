@@ -1,9 +1,13 @@
 .footer {
+  width: 85%;
+  background: var(--color-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   margin-top: 2rem;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer p {
@@ -33,4 +37,10 @@
   background: transparent;
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    width: 100%;
+  }
 }
