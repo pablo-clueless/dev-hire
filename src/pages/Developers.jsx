@@ -17,6 +17,13 @@ const Developers = ({ exchangeRate, currency_name}) => {
     return dateString
   }
 
+  const handleClick = () => {
+    let reply = confirm('Do you want to hire this developer?')
+    if(reply) {
+      alert('You need to have an account to proceed')
+    }
+  }
+
   return (
     <main className='dev__page'>
       <div className="header">
@@ -24,12 +31,17 @@ const Developers = ({ exchangeRate, currency_name}) => {
           <img src={dev?._source.service_photo} alt={dev?._source.display_name} />
         </div>
         <img className="avatar" src={dev?._source.avatar} alt={dev?._source.display_name} />
-        <div className="header__details">
-          <h2>
-            {dev?._source.display_name}
-          </h2>
-          <span>{dev?._source.category_description}</span>
-          <h4>{dev?._source.location.city}, {dev?._source.location.country}</h4>
+        <div className="status__bar">
+          <div className="header__details">
+            <h2>
+              {dev?._source.display_name}
+            </h2>
+            <span>{dev?._source.category_description}</span>
+            <h4>{dev?._source.location.city}, {dev?._source.location.country}</h4>
+          </div>
+          <button type='button' onClick={handleClick}>
+            Hire
+          </button>
         </div>
         <div className="header__content">
           <p>
